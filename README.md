@@ -5,6 +5,8 @@ nd-to-slack.sh
 ====
 
     A script that will display your navidrome users activities in slack.
+    The messages will be formatted:
+    "<USER> is listening to <SONG> by <ARTIST> off of <ALBUM>."
 
 ScreenShots
 ----
