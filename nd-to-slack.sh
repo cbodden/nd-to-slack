@@ -110,7 +110,7 @@ function _Post()
         local _TXT1=":${_ICON}: ${_USER//\"} is listening to ${_TITLE//\"}"
         local _TXT2=" by ${_ARTIST//\"} off of ${_ALBUM//\"}."
 
-        curl \
+        ${CURL} \
             -X POST \
             -H 'Content-type: application/json' \
             --data "{\"text\":\"${_TXT1}${_TXT2}\" }" \
