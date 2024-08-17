@@ -32,7 +32,7 @@ ScreenShots
 - In Slack:
 ![slack](images/slack.png)
 - In Wee-slack:
-![wee-slack](https://i.imgur.com/OktObJI.png)
+![wee-slack](images/weeslack.png)
 
 Configuration
 ----
