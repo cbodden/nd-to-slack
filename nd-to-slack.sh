@@ -71,7 +71,7 @@ function _Length()
     local _RAW_LEN=$(\
         ${JQ} \
             '."subsonic-response".nowPlaying.entry | length' \
-            ${TMPFILE} )
+            ${TMPFILE})
 
     let "_LEN=${_RAW_LEN}"
 }
@@ -96,7 +96,7 @@ function _Post()
 
         _CNT=$(( ${_CNT} + 1 ))
 
-        local _TXT1="${_USER//\"} is listening to ${_TITLE//\"}"
+        local _TXT1=":musical_note: ${_USER//\"} is listening to ${_TITLE//\"}"
         local _TXT2=" by ${_ARTIST//\"} off of ${_ALBUM//\"}."
 
         curl \
