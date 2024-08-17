@@ -3,20 +3,20 @@
 
 ```
 
-            :::.    :::.:::::::-.      ::::::::::::   ...
-            `;;;;,  `;;; ;;,   `';,    ;;;;;;;;''''.;;;;;;;.
-              [[[[[. '[[ `[[     [[         [[    ,[[     \[[,
-              $$$ "Y$c$$  $$,    $$         $$    $$$,     $$$
-              888    Y88  888_,o8P'         88,   "888,_ _,88P
-              MMM     YM  MMMMP"`           MMM     "YMMMMMP"
+                :::.    :::.:::::::-.      ::::::::::::   ...
+                `;;;;,  `;;; ;;,   `';,    ;;;;;;;;''''.;;;;;;;.
+                  [[[[[. '[[ `[[     [[         [[    ,[[     \[[,
+                  $$$ "Y$c$$  $$,    $$         $$    $$$,     $$$
+                  888    Y88  888_,o8P'         88,   "888,_ _,88P
+                  MMM     YM  MMMMP"`           MMM     "YMMMMMP"
 
 
-             .::::::.  :::      :::.       .,-:::::  :::  .
-            ;;;`    `  ;;;      ;;`;;    ,;;;'````'  ;;; .;;,.
-            '[==/[[[[, [[[     ,[[ '[[,  [[[         [[[[[/'
-              '''    $ $$'    c$$$cc$$$c $$$        _$$$$,
-             88b    dPo88oo,.__888   888,`88bo,__,o,"888"88o,
-              "YMmMY" """"YUMMMYMM   ""`   "YUMMMMMP"MMM "MMP"
+                 .::::::.  :::      :::.       .,-:::::  :::  .
+                ;;;`    `  ;;;      ;;`;;    ,;;;'````'  ;;; .;;,.
+                '[==/[[[[, [[[     ,[[ '[[,  [[[         [[[[[/'
+                  '''    $ $$'    c$$$cc$$$c $$$        _$$$$,
+                 88b    dPo88oo,.__888   888,`88bo,__,o,"888"88o,
+                  "YMmMY" """"YUMMMYMM   ""`   "YUMMMMMP"MMM "MMP"
 
 ```
 
@@ -58,8 +58,8 @@ The slack URL_API and the URL_HOOK have been covered in many other places.
 You just need to add an app to slack and grab the webhook url. Once grabbed
 here is the breakdown:
 <pre><code>
-https://hooks.slack.com/services/TTTTTTTTTTT/QQQQQQQQQQQ/XXXXXXXXXXXXXXXXXXXXXXX
-|           URL_API             |                URL_HOOK                      |
+https://hooks.slack.com/services/TTTTTTTTTTT/QQQQQQQQQQQ/XXXXXXXXXXXXXXXXXXXXXX
+|           URL_API             |                URL_HOOK                     |
 
 </code></pre>
 
