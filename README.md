@@ -63,6 +63,10 @@ https://hooks.slack.com/services/TTTTTTTTTTT/QQQQQQQQQQQ/XXXXXXXXXXXXXXXXXXXXXXX
 
 </code></pre>
 
+We also need to change the DIR path in the script itself towards the top.
+This sets the hardcoded path to the folder location of this script and to the
+config folder in case you are running this script in cron.
+
 Once all the Vars are changed now the script can be started. That will be
 covered in usage.
 

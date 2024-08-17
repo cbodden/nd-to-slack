@@ -23,6 +23,8 @@ set -o nounset
 set -o pipefail
 set -u
 
+DIR="/home/cbodden/git/mine/nd-to-slack"
+
 function main()
 {
     readonly NAME=$(basename $0)
@@ -43,9 +45,9 @@ function main()
     done
 
     ## check and source config file
-    if [[ -e config/${NAME::-3}.config ]]
+    if [[ -e ${DIR}/config/${NAME::-3}.config ]]
     then
-        source config/${NAME::-3}.config
+        source ${DIR}/config/${NAME::-3}.config
     else
         printf "%s\n" \
             ". . .Config file not found. . ."
