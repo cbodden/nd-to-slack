@@ -44,6 +44,8 @@ https://hooks.slack.com/services/TTTTTTTTTTT/QQQQQQQQQQQ/XXXXXXXXXXXXXXXXXXXXXXX
 
 </code></pre>
 
+Once all the Vars are changed now the script can be started. That will be
+covered in usage.
 
 
 Usage
