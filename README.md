@@ -69,13 +69,17 @@ covered in usage.
 
 Usage
 ----
+This script can be run a couple of different ways. Two of the easiest are
+by using either cron or doing a while loop at the command line.
+
+- while loop approach
 <pre><code>
-git clone https://github.com/cbodden/nd-to-slack.git
+while :; do ./nd-to-slack.sh ; sleep 300 ; done
 
-cd nd-to-slack/
-
-./nd-to-slack.sh
 </code></pre>
+
+- crontab approach
+<p>*/5 * * * * /path/to/nd-to-slack.sh >/dev/null</p>
 
 Requirements
 ----
