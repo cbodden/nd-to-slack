@@ -79,7 +79,9 @@ while :; do ./nd-to-slack.sh ; sleep 300 ; done
 </code></pre>
 
 - crontab approach
-<p>*/5 * * * * /path/to/nd-to-slack.sh >/dev/null</p>
+<pre><code>
+*/5 * * * * /path/to/nd-to-slack.sh >/dev/null
+</code></pre>
 
 Requirements
 ----
