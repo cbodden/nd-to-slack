@@ -35,6 +35,15 @@ similar to the one below:
 
 Now, lets change the server address to whatever your servers URL is.
 
+The slack URL_API and the URL_HOOK have been covered in many other places.
+You just need to add an app to slack and grab the webhook url. Once grabbed
+here is the breakdown:
+<pre><code>
+https://hooks.slack.com/services/TTTTTTTTTTT/QQQQQQQQQQQ/XXXXXXXXXXXXXXXXXXXXXXX
+|           URL_API             |                URL_HOOK                      |
+</code></pre>
+
+
 Usage
 ----
 <pre><code>
