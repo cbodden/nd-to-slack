@@ -48,7 +48,7 @@ similar to the one below:
 
 ![inspector](images/inspector.png)
 
-- Copy the role / name value to USER.
+- Copy the role / name / username value to USER.
 - Copy the subsonic-salt value to SALT.
 - Copy the subsonic-token value to TOKEN.
 
@@ -83,7 +83,6 @@ post any messages until there is activity again.
 
 Requirements
 ----
-
 - Navidrome - music server (https://www.navidrome.org/)
 - JQ - JSON Processor (https://github.com/jqlang/jq)
 - cURL - (https://curl.se/)
@@ -92,7 +91,6 @@ Requirements
 
 License and Author
 ----
-
 Copyright (c) 2024, cesar@poa.nyc
 All rights reserved.
 
