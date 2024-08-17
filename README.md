@@ -73,15 +73,10 @@ This script can be run a couple of different ways. Two of the easiest are
 by using either cron or doing a while loop at the command line.
 
 - while loop approach
-<pre><code>
-while :; do ./nd-to-slack.sh ; sleep 300 ; done
-
-</code></pre>
+<pre><code>while :; do ./nd-to-slack.sh ; sleep 300 ; done</code></pre>
 
 - crontab approach
-<pre><code>
-*/5 * * * * /path/to/nd-to-slack.sh >/dev/null
-</code></pre>
+<pre><code>*/5 * * * * /path/to/nd-to-slack.sh >/dev/null</code></pre>
 
 Requirements
 ----
