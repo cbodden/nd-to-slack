@@ -8,9 +8,9 @@ nd-to-slack.sh
 
 ScreenShots
 ----
-    In Slack:
+- In Slack:
 ![slack](https://i.imgur.com/P1tBIBD.png)
-    In Wee-slack:
+- In Wee-slack:
 ![wee-slack](https://i.imgur.com/OktObJI.png)
 
 
