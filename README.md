@@ -6,12 +6,14 @@ nd-to-slack.sh
 
     A script that will display your navidrome users activities in slack.
 
+    In Slack:
+![slack](https://i.imgur.com/P1tBIBD.png)
+    In Wee-slack:
+![wee-slack](https://i.imgur.com/OktObJI.png)
+
 
 Usage
 ----
-![slack](https://i.imgur.com/P1tBIBD.png)
-![wee-slack](https://i.imgur.com/OktObJI.png)
-
 <pre><code>
 git clone https://github.com/cbodden/nd-to-slack.git
 
