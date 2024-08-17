@@ -7,13 +7,13 @@
 #   DESCRIPTION: posts usr and listening info from the navidrome SERVER
 #                to slack
 #       OPTIONS: none
-#  REQUIREMENTS: curl, jq, and slack
+#  REQUIREMENTS: curl, jq, slack, and navidrome
 #          BUGS: none so far
 #         NOTES: use wisely
 #        AUTHOR: Cesar Bodden (), cesar@poa.nyc
 #  ORGANIZATION: pissedoffadmins.com
 #       CREATED: 16-AUG-24
-#      REVISION: 1
+#      REVISION: 2
 #===============================================================================
 
 LC_ALL=C

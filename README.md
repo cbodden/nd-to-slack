@@ -78,6 +78,9 @@ by using either cron or doing a while loop at the command line.
 - crontab approach
 <pre><code>*/5 * * * * /path/to/nd-to-slack.sh >/dev/null</code></pre>
 
+While the script runs if the server has no acivity the script will not
+post any messages until there is activity again.
+
 Requirements
 ----
 
