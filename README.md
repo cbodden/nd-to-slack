@@ -15,6 +15,25 @@ ScreenShots
 - In Wee-slack:
 ![wee-slack](https://i.imgur.com/OktObJI.png)
 
+Configuration
+----
+Before this script can be used you need to copy the
+nd-to-slack.config.EXAMPLE file and copy it to nd-to-slack.config
+and change all values listed as "<CHANGE ME>" to working values.
+
+Let us start with USER, TOKEN, and SALT.
+On your navidrome server (this was done with Firefox), once on your
+navidrome home page, right click, and inspect. In the inspection pane click
+storage at the top and then local storage on the left hand to have a window
+similar to the one below:
+
+![inspector](images/inspector.png)
+
+Copy the role / name value to USER.
+Copy the subsonic-salt value to SALT.
+Copy the subsonic-token value to TOKEN.
+
+Now, lets change the server address to whatever your servers URL is.
 
 Usage
 ----
@@ -29,8 +48,7 @@ cd nd-to-slack/
 Requirements
 ----
 
-- SoX - Sound eXchange (https://sox.sourceforge.net/)
-- words file - wordlist (https://en.wikipedia.org/wiki/Words_(Unix)) 
+- Navidrome - music server (https://www.navidrome.org/)
 - JQ - JSON Processor (https://github.com/jqlang/jq)
 - cURL - (https://curl.se/)
 - slack - Web-based instant messaging service (https://slack.com/)
