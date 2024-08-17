@@ -38,7 +38,7 @@ Configuration
 ----
 Before this script can be used you need to copy the
 nd-to-slack.config.EXAMPLE file and copy it to nd-to-slack.config
-and change all values listed as "<CHANGE ME>" to working values.
+and change all values listed as "\<CHANGE ME\>" to working values.
 
 Let us start with USER, TOKEN, and SALT.
 On your navidrome server (this was done with Firefox), once on your
