@@ -29,9 +29,9 @@ similar to the one below:
 
 ![inspector](images/inspector.png)
 
-Copy the role / name value to USER.
-Copy the subsonic-salt value to SALT.
-Copy the subsonic-token value to TOKEN.
+- Copy the role / name value to USER.
+- Copy the subsonic-salt value to SALT.
+- Copy the subsonic-token value to TOKEN.
 
 Now, lets change the server address to whatever your servers URL is.
 
