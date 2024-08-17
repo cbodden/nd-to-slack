@@ -30,7 +30,7 @@ nd-to-slack.sh
 ScreenShots
 ----
 - In Slack:
-![slack](https://i.imgur.com/P1tBIBD.png)
+![slack](images/slack.png)
 - In Wee-slack:
 ![wee-slack](https://i.imgur.com/OktObJI.png)
 

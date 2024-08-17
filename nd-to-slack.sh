@@ -78,6 +78,13 @@ function _Length()
 
 function _Post()
 {
+    declare -r NOTE=(\
+        "musical_note" "musical_score" "musical_keyboard" "headphones" \
+        "notes" "saxophone" "guitar" "trumpet" "violin" "banjo" "microphone" \
+        "drum_with_drumsticks" )
+
+    local _SIZE=${#NOTE[@]}
+
     local _CNT="0"
     while [ "${_CNT}" -lt "${_LEN}" ]
     do
@@ -96,7 +103,9 @@ function _Post()
 
         _CNT=$(( ${_CNT} + 1 ))
 
-        local _TXT1=":musical_note: ${_USER//\"} is listening to ${_TITLE//\"}"
+        local _INDEX=$(($RANDOM % ${_SIZE}))
+        local _ICON=${NOTE[${_INDEX}]}
+        local _TXT1=":${_ICON}: ${_USER//\"} is listening to ${_TITLE//\"}"
         local _TXT2=" by ${_ARTIST//\"} off of ${_ALBUM//\"}."
 
         curl \
