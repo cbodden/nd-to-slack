@@ -13,7 +13,7 @@
 #        AUTHOR: Cesar Bodden (), cesar@poa.nyc
 #  ORGANIZATION: pissedoffadmins.com
 #       CREATED: 16-AUG-24
-#      REVISION: 2
+#      REVISION: 3
 #===============================================================================
 
 LC_ALL=C
@@ -78,7 +78,7 @@ function _Length()
     let "_LEN=${_RAW_LEN}"
 }
 
-function _Post()
+function _Note()
 {
     declare -r NOTE=(\
         "musical_note" "musical_score" "musical_keyboard" "headphones" \
@@ -86,7 +86,12 @@ function _Post()
         "drum_with_drumsticks" )
 
     local _SIZE=${#NOTE[@]}
+    local _INDEX=$(($RANDOM % ${_SIZE}))
+    readonly _ICON=${NOTE[${_INDEX}]}
+}
 
+function _Post()
+{
     local _CNT="0"
     while [ "${_CNT}" -lt "${_LEN}" ]
     do
@@ -105,8 +110,29 @@ function _Post()
 
         _CNT=$(( ${_CNT} + 1 ))
 
-        local _INDEX=$(($RANDOM % ${_SIZE}))
-        local _ICON=${NOTE[${_INDEX}]}
+        if [ ! -f "/tmp/${NAME::-3}/${_USER}.out" ]
+        then
+            if [ ! -d "/tmp/${NAME::-3}" ]
+            then
+                mkdir /tmp/${NAME::-3}
+            fi
+
+            echo ${_USER} > /tmp/${NAME::-3}/${_USER}.out
+            echo ${_ARTIST} >> /tmp/${NAME::-3}/${_USER}.out
+            echo ${_TITLE} >> /tmp/${NAME::-3}/${_USER}.out
+            echo ${_ALBUM} >> /tmp/${NAME::-3}/${_USER}.out
+        else
+            if grep -q -x "${_TITLE}" "/tmp/${NAME::-3}/${_USER}.out"
+            then
+                exit 0
+            else
+                echo ${_USER} > /tmp/${NAME::-3}/${_USER}.out
+                echo ${_ARTIST} >> /tmp/${NAME::-3}/${_USER}.out
+                echo ${_TITLE} >> /tmp/${NAME::-3}/${_USER}.out
+                echo ${_ALBUM} >> /tmp/${NAME::-3}/${_USER}.out
+            fi
+        fi
+
         local _TXT1=":${_ICON}: ${_USER//\"} is listening to ${_TITLE//\"}"
         local _TXT2=" by ${_ARTIST//\"} off of ${_ALBUM//\"}."
 
@@ -123,6 +149,7 @@ _NdOut
 _Length
 if [ "${_LEN}" -gt "0" ]
 then
+    _Note
     _Post
 else
     exit 0
