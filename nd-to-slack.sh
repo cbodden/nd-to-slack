@@ -13,7 +13,7 @@
 #        AUTHOR: Cesar Bodden (), cesar@poa.nyc
 #  ORGANIZATION: pissedoffadmins.com
 #       CREATED: 16-AUG-24
-#      REVISION: 3
+#      REVISION: 4
 #===============================================================================
 
 LC_ALL=C
@@ -80,14 +80,24 @@ function _Length()
 
 function _Note()
 {
-    declare -r NOTE=(\
-        "musical_note" "musical_score" "musical_keyboard" "headphones" \
-        "notes" "saxophone" "guitar" "trumpet" "violin" "banjo" "microphone" \
-        "drum_with_drumsticks" )
+    case ${EMOJI} in
+        "1")
+            readonly _ICON=""
+            ;;
+        "2")
+            readonly _ICON="musical_note"
+            ;;
+        "3" | *)
+            declare -r NOTE=(\
+                "musical_note" "musical_score" "musical_keyboard" "headphones" \
+                "notes" "saxophone" "guitar" "trumpet" "violin" "microphone" \
+                "drum_with_drumsticks" "banjo" "headphones")
 
-    local _SIZE=${#NOTE[@]}
-    local _INDEX=$(($RANDOM % ${_SIZE}))
-    readonly _ICON=${NOTE[${_INDEX}]}
+            local _SIZE=${#NOTE[@]}
+            local _INDEX=$(($RANDOM % ${_SIZE}))
+            readonly _ICON=${NOTE[${_INDEX}]}
+            ;;
+    esac
 }
 
 function _Post()
@@ -136,11 +146,11 @@ function _Post()
         local _TXT1=":${_ICON}: ${_USER//\"} is listening to ${_TITLE//\"}"
         local _TXT2=" by ${_ARTIST//\"} off of ${_ALBUM//\"}."
 
-        ${CURL} \
-            -X POST \
-            -H 'Content-type: application/json' \
-            --data "{\"text\":\"${_TXT1}${_TXT2}\" }" \
-            "${URL_API}/${URL_HOOK}"
+        ##${CURL} \
+        ##    -X POST \
+        ##    -H 'Content-type: application/json' \
+        ##    --data "{\"text\":\"${_TXT1}${_TXT2}\" }" \
+        ##    "${URL_API}/${URL_HOOK}"
     done
 }
 

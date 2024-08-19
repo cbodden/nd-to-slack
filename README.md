@@ -63,6 +63,11 @@ https://hooks.slack.com/services/TTTTTTTTTTT/QQQQQQQQQQQ/XXXXXXXXXXXXXXXXXXXXXX
 
 </code></pre>
 
+For vanity reasons there is a var called "EMOJI". This setting is 1, 2, or 3.
+1 = no emoji set in the messages
+2 = "musical_note" (:musical_note:) is set for all messages.
+3 = Randomized
+
 We also need to change the DIR path in the script itself towards the top.
 This sets the hardcoded path to the folder location of this script and to the
 config folder in case you are running this script in cron.
