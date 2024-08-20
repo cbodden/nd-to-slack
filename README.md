@@ -41,14 +41,16 @@ nd-to-slack.config.EXAMPLE file and copy it to nd-to-slack.config
 and change all values listed as "\<CHANGE ME\>" to working values.
 
 - nd-to-slack.config.EXAMPLE
-<pre><code>USER=\"\<CHANGE ME\>\"
-TOKEN="\<CHANGE ME\>"
-SALT="\<CHANGE ME\>"
-SERVER="\<CHANGE ME\>"
+```
+USER="<CHANGE ME>"
+TOKEN="<CHANGE ME>"
+SALT="<CHANGE ME>"
+SERVER="<CHANGE ME>"
 URL_API="https://hooks.slack.com/services"
-URL_HOOK="\<CHANGE ME\>"
+URL_HOOK="<CHANGE ME>"
 EMOJI="3"
-LINK="1"</code></pre>
+LINK="1"
+```
 
 
 Let us start with USER, TOKEN, and SALT.
