@@ -40,6 +40,17 @@ Before this script can be used you need to copy the
 nd-to-slack.config.EXAMPLE file and copy it to nd-to-slack.config
 and change all values listed as "\<CHANGE ME\>" to working values.
 
+- nd-to-slack.config.EXAMPLE
+<pre><code>USER="\<CHANGE ME\>"
+TOKEN="\<CHANGE ME\>"
+SALT="\<CHANGE ME\>"
+SERVER="\<CHANGE ME\>"
+URL_API="https://hooks.slack.com/services"
+URL_HOOK="\<CHANGE ME\>"
+EMOJI="3"
+LINK="1"</code></pre>
+
+
 Let us start with USER, TOKEN, and SALT.
 On your navidrome server (this was done with Firefox), once on your
 navidrome home page, right click, and inspect. In the inspection pane click
