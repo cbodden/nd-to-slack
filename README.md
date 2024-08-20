@@ -98,7 +98,10 @@ by using either cron or doing a while loop at the command line.
 <pre><code>*/5 * * * * /path/to/nd-to-slack.sh >/dev/null</code></pre>
 
 While the script runs if the server has no acivity the script will not
-post any messages until there is activity again.
+post any messages until there is activity again and it wont repost a
+presently playing song if the loop / cron time is set short.
+
+This script was test with cron at 1 minute intervals.
 
 Requirements
 ----
