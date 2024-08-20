@@ -70,6 +70,14 @@ For vanity reasons there is a var called "EMOJI". This setting is 1, 2, or 3.
 
 If none is set it will default to "3".
 
+If you want to post with a link to the album you have to change the config
+var "LINK" to "1".
+- Appearance with links in Slack:
+![slack_links](images/slack_with_links.png)
+- Appearance with links in Wee-Slack:
+![wee-slack_links](images/wee-slack_with_links.png)
+
+
 We also need to change the DIR path in the script itself towards the top.
 This sets the hardcoded path to the folder location of this script and to the
 config folder in case you are running this script in cron.

@@ -85,7 +85,7 @@ function _Note()
             readonly _ICON=""
             ;;
         "2")
-            readonly _ICON="musical_note"
+            readonly _ICON=":musical_note:"
             ;;
         "3" | *)
             declare -r NOTE=(\
@@ -95,7 +95,7 @@ function _Note()
 
             local _SIZE=${#NOTE[@]}
             local _INDEX=$(($RANDOM % ${_SIZE}))
-            readonly _ICON=${NOTE[${_INDEX}]}
+            readonly _ICON=":${NOTE[${_INDEX}]}:"
             ;;
     esac
 }
@@ -116,6 +116,9 @@ function _Post()
             ${TMPFILE})
         local _ALBUM=$(${JQ} \
             '."subsonic-response".nowPlaying.entry'[${_CNT}]'.album' \
+            ${TMPFILE})
+        local _PARENT=$(${JQ} \
+            '."subsonic-response".nowPlaying.entry'[${_CNT}]'.parent' \
             ${TMPFILE})
 
         _CNT=$(( ${_CNT} + 1 ))
@@ -143,14 +146,25 @@ function _Post()
             fi
         fi
 
-        local _TXT1=":${_ICON}: ${_USER//\"} is listening to ${_TITLE//\"}"
+        local _TXT1="${_ICON} ${_USER//\"} is listening to ${_TITLE//\"}"
         local _TXT2=" by ${_ARTIST//\"} off of ${_ALBUM//\"}."
+        local _TXT3="\n:link: ${SERVER//\"}/app/#/album/${_PARENT//\"}/show"
+
+        case ${LINK} in
+            "1")
+                local _LNK="${_TXT1}${_TXT2}${_TXT3}"
+                ;;
+            "2" | *)
+                local _LNK="${_TXT1}${_TXT2}"
+                ;;
+        esac
 
         ${CURL} \
             -X POST \
             -H 'Content-type: application/json' \
-            --data "{\"text\":\"${_TXT1}${_TXT2}\" }" \
+            --data "{\"text\":\"${_LNK}\"}" \
             "${URL_API}/${URL_HOOK}"
+
     done
 }
 
