@@ -41,7 +41,7 @@ nd-to-slack.config.EXAMPLE file and copy it to nd-to-slack.config
 and change all values listed as "\<CHANGE ME\>" to working values.
 
 - nd-to-slack.config.EXAMPLE
-<pre><code>USER="\<CHANGE ME\>"
+<pre><code>USER=\"\<CHANGE ME\>\"
 TOKEN="\<CHANGE ME\>"
 SALT="\<CHANGE ME\>"
 SERVER="\<CHANGE ME\>"
