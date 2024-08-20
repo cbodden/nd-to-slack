@@ -146,11 +146,11 @@ function _Post()
         local _TXT1=":${_ICON}: ${_USER//\"} is listening to ${_TITLE//\"}"
         local _TXT2=" by ${_ARTIST//\"} off of ${_ALBUM//\"}."
 
-        ##${CURL} \
-        ##    -X POST \
-        ##    -H 'Content-type: application/json' \
-        ##    --data "{\"text\":\"${_TXT1}${_TXT2}\" }" \
-        ##    "${URL_API}/${URL_HOOK}"
+        ${CURL} \
+            -X POST \
+            -H 'Content-type: application/json' \
+            --data "{\"text\":\"${_TXT1}${_TXT2}\" }" \
+            "${URL_API}/${URL_HOOK}"
     done
 }
 
