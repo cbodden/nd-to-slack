@@ -70,11 +70,10 @@ Now, lets change the server address to whatever your servers URL is.
 The slack URL_API and the URL_HOOK have been covered in many other places.
 You just need to add an app to slack and grab the webhook url. Once grabbed
 here is the breakdown:
-<pre><code>
+```
 https://hooks.slack.com/services/TTTTTTTTTTT/QQQQQQQQQQQ/XXXXXXXXXXXXXXXXXXXXXX
 |           URL_API             |                URL_HOOK                     |
-
-</code></pre>
+```
 
 For vanity reasons there is a var called "EMOJI". This setting is 1, 2, or 3.
 - 1 = no emoji set in the messages
