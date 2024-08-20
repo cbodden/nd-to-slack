@@ -75,6 +75,7 @@ https://hooks.slack.com/services/TTTTTTTTTTT/QQQQQQQQQQQ/XXXXXXXXXXXXXXXXXXXXXX
 |           URL_API             |                URL_HOOK                     |
 ```
 
+
 For vanity reasons there is a var called "EMOJI". This setting is 1, 2, or 3.
 - 1 = no emoji set in the messages
 - 2 = "musical_note" :musical_note: is set for all messages.
@@ -104,10 +105,16 @@ This script can be run a couple of different ways. Two of the easiest are
 by using either cron or doing a while loop at the command line.
 
 - while loop approach
-<pre><code>while :; do ./nd-to-slack.sh ; sleep 300 ; done</code></pre>
+```
+while :; do ./nd-to-slack.sh ; sleep 300 ; done
+```
+
 
 - crontab approach
-<pre><code>*/5 * * * * /path/to/nd-to-slack.sh >/dev/null</code></pre>
+```
+*/5 * * * * /path/to/nd-to-slack.sh >/dev/null
+```
+
 
 While the script runs if the server has no acivity the script will not
 post any messages until there is activity again and it wont repost a
