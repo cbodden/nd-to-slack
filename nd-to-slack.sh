@@ -146,8 +146,8 @@ function _Post()
             fi
         fi
 
-        local _TXT1="${_ICON} ${_USER//\"} is listening to ${_TITLE//\"}"
-        local _TXT2=" by ${_ARTIST//\"} off of ${_ALBUM//\"}."
+        local _TXT1="${_ICON} ${_USER//\"} is listening to _${_TITLE//\"}_"
+        local _TXT2=" by _${_ARTIST//\"}_ off of _${_ALBUM//\"}_."
         local _TXT3="\n:link: ${SERVER//\"}/app/#/album/${_PARENT//\"}/show"
 
         case ${LINK} in
